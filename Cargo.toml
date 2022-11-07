@@ -1,16 +1,16 @@
 [package]
-name = "shannon-entropy"
+name = "shannon-entropy-wasm"
 version = "1.0.0"
+edition = "2021"
 authors = ["insanitybit <insanitybit@gmail.com>"]
 description = "A simple library to calculate the Shannon entropy of a string"
 license = "MIT OR Apache-2.0"
 keywords = ["shannon", "entropy"]
-
-repository = "https://github.com/insanitybit/shannon-entropy"
+repository = "https://github.com/ZReC/shannon-entropy-wasm"
 readme = "README.md"
 
-[profile.bench]
-opt-level = 3
-debug = false
-rpath = false
-debug-assertions = false
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.83"
